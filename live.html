@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sessão ao Vivo | Fisio Smart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="live">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🖐️</div>
+        <div>
+          <h2>Fisio Smart</h2>
+          <p>Análise de Movimento</p>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="overview.html" class="menu-button" data-page="overview">Visão Geral</a>
+        <a href="live.html" class="menu-button" data-page="live">Sessão ao Vivo</a>
+        <a href="history.html" class="menu-button" data-page="history">Histórico</a>
+        <a href="analytics.html" class="menu-button" data-page="analytics">Análises IA</a>
+      </nav>
+      <button id="logoutButton" class="secondary-button">Sair</button>
+    </aside>
+    <main class="main-content">
+      <div class="section-header">
+        <div>
+          <h1>Sessão ao Vivo</h1>
+          <p>Monitoramento em tempo real dos sensores da luva via simulação</p>
+        </div>
+      </div>
+      <div class="panel card live-controls">
+        <div>
+          <div class="status-row">
+            <span id="liveStatus" class="status-dot paused">Pausado</span>
+            <span id="selectedPatientLabel">Paciente: João Silva</span>
+          </div>
+          <select id="patientSelect" class="select-field"></select>
+        </div>
+        <div class="button-row">
+          <button id="startStopButton" class="primary-button">Iniciar</button>
+          <button id="clearButton" class="secondary-button">Limpar</button>
+        </div>
+      </div>
+      <div class="panel card">
+        <h3>Gerenciar Pacientes</h3>
+        <div style="display: grid; gap: 12px;">
+          <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 8px;">
+            <input id="newPatientInput" type="text" class="select-field" placeholder="Nome do paciente" />
+            <button id="addPatientButton" class="primary-button">Adicionar</button>
+          </div>
+          <div id="patientsList" style="display: grid; gap: 8px;"></div>
+        </div>
+      </div>
+      <div class="panel card">
+        <h3>Dados em Tempo Real (Simulação)</h3>
+        <p style="font-size: 0.9rem; color: #6b7280; margin: 0 0 12px 0;">Clique em um dedo para selecionar apenas esse. Clique novamente para desselecionar e ver todos os dedos.</p>
+        <div class="stats-grid" id="liveStats"></div>
+      </div>
+      <div class="panel card">
+        <h3>Valores Atuais</h3>
+        <div class="values-grid" id="liveValues"></div>
+      </div>
+    </main>
+  </div>
+  <script src="Backend/scriptgeral.js"></script>
+</body>
+</html>

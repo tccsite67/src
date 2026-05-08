@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico | Fisio Smart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="history">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🖐️</div>
+        <div>
+          <h2>Fisio Smart</h2>
+          <p>Análise de Movimento</p>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="overview.html" class="menu-button" data-page="overview">Visão Geral</a>
+        <a href="live.html" class="menu-button" data-page="live">Sessão ao Vivo</a>
+        <a href="history.html" class="menu-button" data-page="history">Histórico</a>
+        <a href="analytics.html" class="menu-button" data-page="analytics">Análises IA</a>
+      </nav>
+      <button id="logoutButton" class="secondary-button">Sair</button>
+    </aside>
+    <main class="main-content">
+      <div class="section-header">
+        <div>
+          <h1>Histórico de Sessões</h1>
+          <p>Consulte todas as sessões registradas.</p>
+        </div>
+      </div>
+      <div class="panel card filters-row">
+        <div>
+          <label>Data</label>
+          <input id="historyDate" type="date" />
+        </div>
+        <div>
+          <label>Paciente</label>
+          <select id="historyPatient"></select>
+        </div>
+        <button id="clearFilters" class="secondary-button">Limpar Filtros</button>
+      </div>
+      <div class="panel card table-panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Paciente</th>
+              <th>Data/Hora</th>
+              <th>Exercício</th>
+              <th>Duração</th>
+              <th>Progresso</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="historyTable"></tbody>
+        </table>
+        <div id="historyEmpty" class="empty-state">Nenhuma sessão encontrada com os filtros selecionados.</div>
+      </div>
+    </main>
+  </div>
+  <script src="Backend/scriptgeral.js"></script>
+</body>
+</html>

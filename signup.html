@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Fisio Smart | Cadastro</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="login-container">
+
+    <div class="login-card">
+
+      <div class="login-icon">💡</div>
+
+      <h1>Criar Conta</h1>
+
+      <p class="subtitle">
+        Sistema de Fisioterapia com IA
+      </p>
+
+      <!-- FORM CADASTRO -->
+      <form id="signupForm" class="login-form">
+
+        <label for="signupEmail">Email</label>
+
+        <input
+          type="email"
+          id="signupEmail"
+          placeholder="seu@email.com"
+          required
+        />
+
+        <label for="signupPassword">Senha</label>
+
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="••••••••"
+          minlength="6"
+          required
+        />
+
+        <label for="confirmPassword">Confirmar Senha</label>
+
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="••••••••"
+          minlength="6"
+          required
+        />
+
+        <!-- BOTÃO CADASTRO -->
+        <button type="submit" class="primary-button">
+          Cadastrar
+        </button>
+
+      </form>
+
+      <!-- BOTÃO VOLTAR PARA LOGIN -->
+      <button id="backToLoginBtn" class="secondary-button">
+        Já tenho conta
+      </button>
+
+      <p class="note">
+        Preencha os dados para criar sua conta
+      </p>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="Backend/signup.js"></script>
+
+</body>
+
+</html>

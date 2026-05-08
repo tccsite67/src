@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Setup OpenAI Key</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .setup-box {
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 500px;
+    }
+    .setup-box h1 { margin-top: 0; color: #667eea; }
+    .success { color: #10b981; font-weight: 600; }
+    .status { margin-top: 20px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="setup-box">
+    <h1>⚙️ Configurando OpenAI...</h1>
+    <div class="status" id="status">Processando...</div>
+  </div>
+
+  <script>
+    // Sua chave
+    const apiKey = "";
+    
+    // Salvar no localStorage
+    localStorage.setItem("openaiApiKey", apiKey);
+    
+    // Mostrar sucesso
+    const statusDiv = document.getElementById("status");
+    statusDiv.innerHTML = `
+      <p class="success">✅ Chave salva com sucesso!</p>
+      <p>Redirecionando para testes...</p>
+    `;
+    
+    // Redirecionar após 2 segundos
+    setTimeout(() => {
+      window.location.href = "test-openai.html";
+    }, 2000);
+  </script>
+</body>
+</html>
